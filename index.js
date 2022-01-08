@@ -664,7 +664,7 @@ if (budy.includes("https://m.facebook.com/")){
                 case 'welmenu':
 		client.sendMessage(from, welmenu(prefix, sender), text, {quoted: mek})
 		break
-		case 'shantera':
+		case 'terna':
 		client.sendMessage(from, shantera(prefix, sender), text, {quoted: mek})
 		break
 					
