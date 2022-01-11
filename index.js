@@ -1607,8 +1607,8 @@ break
 					break
                 default:
                 
-		if (budy.includes(`Todo bien`)) {
-                  reply(`Si amigo todo bien, vite`)
+		if (budy.includes(`zully`)) {
+                  reply(`en que puedo ayudarte`)
                   }
 
 		if (budy.includes(`Buenos dias`)) {
@@ -1783,7 +1783,7 @@ break
         const none = fs.readFileSync('./mp3/gaspi5.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
-               if (budy.startsWith(`Sexo`)) { 
+               if (budy.startsWith(`zully`)) { 
         const none = fs.readFileSync('./mp3/sexo.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
