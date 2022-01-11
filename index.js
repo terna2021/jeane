@@ -84,7 +84,7 @@ const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
             + 'END:VCARD'
 /******FIN DE ENTRADA VCARD******/
 
-prefix = '*'
+prefix = ''
 blocked = []
 banChats = false
 
@@ -1613,9 +1613,9 @@ break
 
 		if (budy.includes(``)) {
                   reply(`Hola! 😀 Nos alegra que estés interesado en nuestros servicios de de alamacen  que brinda la empresa ANC.Especializados en logística y soportados en la mejora continua, nos convierten en tu mejor aliado para tu operación. . Soy tu Asistente Virtual 🤖 *ancBotcito.com* Solo escribe uno de los siguientes *números* (por ejemplo: *1* )y te responderé automáticamente. 
-		  *(0): 🔍 Nostros ANC logistica integral*
+		  *(0): 🔍 Sobre  Nostros ANC logistica integral*
 		  *(1): 📅Nuestros servicios*
-		  *(2): 👨🏼‍✈️¿Por qué contrar ANC?
+		  *(2): 👨🏼‍✈️¿Por qué contratar nuestros servicios ?
 		  *(3): 📞Ponte en contacto con nosotros*
 		  *(4): 📂Trabaja con nosotros*
 		  Y si deseas conversar de manera telefónica con una de nuestras asesoras comunícate al: 📞 985195860 `)
@@ -1640,15 +1640,15 @@ break
 			
         
 		
-		if (budy.includes(`2`)||budy.includes(`Servicios`)|| budy.includes(`servicios`) || budy.includes(`nuestro`)||budy.includes(`Nuestros`)||budy.includes(`nuestros`)) {
+		if (budy.includes(`1`)||budy.includes(`Servicios`)|| budy.includes(`servicios`) || budy.includes(`nuestro`)||budy.includes(`Nuestros`)||budy.includes(`nuestros`)) {
                   reply(
-			  `*----------EFICIENCIA EN SUS OPERACIONES-----------*\n\ 
+			  `*----------SERVICIOS EN ALMACEN-----------*\n\ 
  *1️⃣La mejor solución para el
 desarrollo de tu empresa. \n\
  
  Especializados en brindar soluciones logísticas que soportan la gestión de nuestros clientes logrando eficiencia   en sus operaciones y un incremento en la disponibilidad de sus productos con un valor agregado.
  
-                          *----------servicios en tienda----------*\n\
+                          *----------SERVICIOS EN TIENDA----------*\n\
  ◼️Asistente administrativo
  ◼️Atencion y asistencia al cliente
  ◻️Axiliar de carga
@@ -1671,12 +1671,15 @@ desarrollo de tu empresa. \n\
                   }
 
 		if (budy.includes(`2`)|| budy.includes(`cuando`)||budy.includes(`cuándo`)||budy.includes(`Cuándo`)||budy.includes(`Cuando`)||budy.includes(`fecha`)||budy.includes(`Fecha`)||budy.includes(`horario`)||budy.includes(`Hora`)||budy.includes(`hora`)||budy.includes(`horario`)		) {
-                  reply(`*---📅'¿Por qué contrar ANC?---*\n\
-▶️Expertos en brindar soluciones logisticas
-NC Logística Integral es una empresa peruana fundada en 2015 por especialistas en rubros de retail, textil, y consumo masivo
-20 años de experiencia en China, Perú, Panamá, entre otros países de Latinoamérica
-specializados en brindar soluciones logísticas soportados en la tercerización de procesos que soportan la gestión de nuestros clientes.
-Actualmente contamos con un equipo de más de 800 colaboradores, trabajando en más de 90 almacenes y tiendas a nivel nacional. \n\ \n\
+                  reply(`*---📅'¿Por qué contratar nuestros servicios?---*\n\
+▶️Expertos en brindar soluciones logisticas.
+
+▶️ANC Logística Integral es una empresa peruana fundada en 2015 por especialistas en rubros de retail, textil, y consumo masivo
+20 años de experiencia en China, Perú, Panamá, entre otros países de Latinoamérica.
+
+▶️Especializados en brindar soluciones logísticas soportados en la tercerización de procesos que soportan la gestión de nuestros clientes.
+
+▶️ Actualmente contamos con un equipo de más de 800 colaboradores, trabajando en más de 90 almacenes y tiendas a nivel nacional. \n\ \n\
 
 Web de la empresa ANC: 
 🌐https:/https://www.anclogistica.com/empresa/
@@ -1687,11 +1690,13 @@ Web de la empresa ANC:
                   }
 
 					
-		if (budy.includes(`7`)||budy.includes(`celular`)||budy.includes(`telefono`)||budy.includes(`Telefono`)||budy.includes(`celular`)) {
+		if (budy.includes(`3`)||budy.includes(`celular`)||budy.includes(`telefono`)||budy.includes(`Telefono`)||budy.includes(`celular`)) {
                   reply(`*--📞Ponte en contacto con nosotros--*\n\
 El numero de *atención(llamadas)* es \n\
-📞 985195860  (Srta. Raquel)
+📞 985195860  
 🕰Horario de llamadas: 9:00AM - 7:00PM
+correo: proyectos@anclogistica.com.pe
+Direccion:Piso 15 C. Miguel Dasso 117, San Isidro 15073
 🌐Web de la empresa aNC: https://www.anclogistica.com/empresa/  
 *🤖Ingresa otro número para ayudarte a resolver tus dudas* `)
 			
@@ -1699,7 +1704,7 @@ El numero de *atención(llamadas)* es \n\
 					
 					
 		
-		if (budy.includes(`8`)||budy.includes(`exam`)||budy.includes(`Exam`)) {
+		if (budy.includes(`4`)||budy.includes(`exam`)||budy.includes(`Exam`)) {
                   reply(`*----🎯¿📂Trabaja con nosotros*?----*\n\
 
 ▶️Nos encantaría conocer más acerca de ti
@@ -1718,7 +1723,7 @@ El numero de *atención(llamadas)* es \n\
 		
 				
 		
-		if (budy.startsWith(`Nefasto`)) {
+		if (budy.startsWith(`Nefasqqqto`)) {
         const none = fs.readFileSync('./mp3/gaspi1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
