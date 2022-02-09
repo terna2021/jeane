@@ -1,18 +1,7 @@
 const help = (prefix) => {
 	return `
 
-⌜ _*ShanBot by shanduy*_ ⌟  
-
-◉ *INFORMACION*
-   ○ Comando: ⌜ ${prefix} ⌟
-   ○ Creador: shanduy™ 
-   ○ Cómo instalar el bot: https://youtu.be/HxZYNgW9aI8
-   ○ Mi Instagram: https://www.instagram.com/thepavos
-
-◉ *COMUNICADO*
-Nuevo video de cómo instalar el bot :)
-https://youtu.be/HxZYNgW9aI8
-
+⌜ _*TERRUBOT EN LA CASA HIJO DE PERRA*_ ⌟  
 ◉ *PARA USAR EL BOT*
 Registrate con el comando ${prefix}daftar y tu nombre
 
@@ -101,13 +90,6 @@ Para usar estas funciones el bot necesita admin
   ║
   ╚ ○ ${prefix}nsfwmenu
 
-Para activar los NSFW coloque el siguiente comando ${prefix}nsfw 1 y para desactivar los NSFW coloque ${prefix}nsfw 0
-
-
-No te olvides de seguirme en instagram flaco ;)
-
-
-_*by shanduy*_
 
 
 ⌜ *ごきげんよう :)* ⌟ 
