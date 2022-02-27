@@ -1387,7 +1387,7 @@ break
 			
 	//SERVICIO DE MUSICA Y VIDEO 			
 		
-			case "audio":		  
+			case "play":		  
   if (args.length < 1) return reply('Escribe el nombre')
   reply(mess.wait)
   playi = body.slice(7)
@@ -1419,7 +1419,7 @@ quoted: mek, caption: infomp3 })
 mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek})
 break
 
-			case "audio2":		  
+			case "play2":		  
   if (args.length < 1) return reply('Escribe el nombre')
   reply(mess.wait)
   playi = body.slice(8)
