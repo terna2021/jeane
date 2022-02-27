@@ -333,7 +333,7 @@ async function starts() {
 					insta: 'Calmao 😎\n\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor\n\n_*by shanduy*_',
 					musica: '*Papaseto lendo no hay musica, stickers nu mas aish* ',
 				        musica2: 'Calmao pa estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube*\n\n*Si el comando *play2 no funciona utiliza el comando *play*\n\nSi no envio tu musica checa que version tienes del bot con *version\n\n_*by shanduy*_',
-					daftarB: `「APESTOSOOO」\n\nAUN NO TE REGISTRASTE ✋🥸🤚\n\nPara ser parte del club premiun comando\n\nComando: ${prefix}terna DPC: ${prefix}terna_michero_x_siempre`,
+					daftarB: `「APESTOSOOO」\n\nAUN NO TE REGISTRASTE ✋🥸🤚\n\nPara ser parte del club premiun comando\n\nComando: ${prefix}terna (nick) Nombre/ejemlpo: ${prefix}terna_michero_x_siempre`,
 				}
 			}
     			const apakah = ['Si','No']
@@ -1386,47 +1386,72 @@ break
 		
 			
 	//SERVICIO DE MUSICA Y VIDEO 			
-				
-		   case 'play':   
-	        if (args.length < 1) return reply('Donde esta el nombre de la canción?\n\nEjemplo: *play Industry Baby - Lil Nas X')
-		if (!isUser) return reply(mess.only.daftarB)
-                reply(mess.only.musica)
-                play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=28hamilton`)
-                if (anu.error) return reply(anu.error)
-                infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n_*Servicio proveido por shanduy*_`
-                buffer = await getBuffer(anu.result.thumbnail)
-                lagu = await getBuffer(anu.result.url_audio)
-                client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
-                client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
-                break
 		
-		case 'play2':   
-	        if (args.length < 1) return reply('Donde esta el nombre de la canción?\n\nEjemplo: *play2 Industry Baby - Lil Nas X')
-		if (!isUser) return reply(mess.only.daftarB)
-	        reply(mess.only.musica2)
-                play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=28shanduy`)
-                if (anu.error) return reply(anu.error)
-                infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n_*Servicio proveido por shanduy*_`
-                buffer = await getBuffer(anu.result.thumbnail)
-                lagu = await getBuffer(anu.result.url_audio)
-                client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
-                client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
-                break
-		case 'ytmp4':
-		if (args.length < 1) return reply('Donde esta la url del video?\n\nEjemplo: *ytmp4 www.youtube.com/xxxxxxxxx')
-		if (!isUser) return reply(mess.only.daftarB)
-		reply(mess.only.mpv)
-		if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-		anu = await fetchJson(`https://api.zeks.me/api/ytmp4?apikey=${apikey}&url=${args[0]}`, {method: 'get'})
-		if (anu.error) return reply(anu.error.yt)
-		teks = `*⌜Video Encontrado ✅⌟*\n◉ *Título:* ${anu.result.title} \n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*\n\n_*Servicio proveido por shanduy*_`
-		lagu = await getBuffer(anu.result.thumbnail)
-                client.sendMessage(from, lagu, image, {quoted: mek, caption: teks})
-		buffer = await getBuffer(anu.result.url_video)
-		client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.result.title}.mp4`, quoted: mek})
-		break
+			case "audio":		  
+  if (args.length < 1) return reply('Escribe el nombre')
+  reply(mess.wait)
+  playi = body.slice(7)
+  anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${playi}&apikey=apivinz`)  
+   if (anu.error) return reply(anu.error)
+  infomp3 = `❒═════❬ *𝐏𝐋𝐀𝐘* ❭═════╾❒
+├‣ *Nombre* : 
+┴
+${anu.result.title}
+┬
+├‣ *Fuente* : 
+┴
+${anu.result.source}
+┬
+├‣ *Tamaño* : 
+┴
+${anu.result.size}
+┬
+├‣ *Link* :
+┴
+*${anu.result.url_audio}
+┬
+❒═════════════════╾❒`
+  buffer = await getBuffer(anu.result.thumbnail)
+  lagu = await getBuffer(anu.result.url_audio)
+  cnf.sendMessage(from, buffer, image, {
+quoted: mek, caption: infomp3 })
+  cnf.sendMessage(from, lagu, audio, {
+mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek})
+break
+
+			case "audio2":		  
+  if (args.length < 1) return reply('Escribe el nombre')
+  reply(mess.wait)
+  playi = body.slice(8)
+  anu = await fetchJson(`https://api.lolhuman.xyz/api/jooxplay?apikey=${lolh}&query=${playi}`)
+   if (anu.error) return reply(anu.error)
+  infomp33 = `❒═════❬ *𝐏𝐋𝐀𝐘* ❭═════╾❒
+├‣ *Nombre* : 
+┴
+${anu.result.info.singer}
+┬
+├‣ *Álbum* : 
+┴
+${anu.result.info.album}
+┬
+├‣ *Duración* : 
+┴
+${anu.result.info.duration}
+┬
+├‣ *Link* :
+┴
+*${anu.result.audio.link}
+┬
+❒═════════════════╾❒`
+  buffer = await getBuffer(`https://i.ibb.co/C7Mt5j2/descarga.png`)
+  lagu = await getBuffer(anu.result.audio.link)
+  cnf.sendMessage(from, buffer, image, {
+quoted: mek, caption: infomp33 })
+  cnf.sendMessage(from, lagu, audio, {
+mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek})  
+          break
+
+
 				
              											
 	//FIN DE SERVICIO DE MUSICA Y VIDEO			
