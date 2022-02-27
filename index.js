@@ -664,7 +664,7 @@ if (budy.includes("https://m.facebook.com/")){
                 case 'welmenu':
 		client.sendMessage(from, welmenu(prefix, sender), text, {quoted: mek})
 		break
-		case 'terna':
+		case 'bot':
 		client.sendMessage(from, shantera(prefix, sender), text, {quoted: mek})
 		break
 					
@@ -790,7 +790,7 @@ break
                 break
 	
 	
-	case 'x':
+	case 'dfx':
                 client.updatePresence(from, Presence.composing) 
                 if (!isGroupAdmins) return reply(mess.only.Badmin)
 		if (!isUser) return reply(mess.only.daftarB)
