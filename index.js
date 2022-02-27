@@ -333,7 +333,7 @@ async function starts() {
 					insta: 'Calmao 😎\n\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor\n\n_*by shanduy*_',
 					musica: '*Papaseto lendo no hay musica, stickers nu mas aish* ',
 					musica2: '*Papaseto lendo no hay musica, stickers nu mas aish*',
-					daftarB: `「Habla Apestosooo」\n\nP✋🥸🤚\n\nPara poder ser parte del club premiun comando\n\nComando: ${prefix}terna micheroxsiempre\nEjemplo: ${prefix}terna+ (tu nick)`,
+					daftarB: `「Habla Apestosooo\n\nP✋🥸🤚\n\nPara poder ser parte del club premiun comando\n\nComando:${prefix}terna micheroxsiempre\nEjemplo: ${prefix}terna(tu nick)`,
 				}
 			}
     			const apakah = ['Si','No']
@@ -1436,7 +1436,7 @@ break
 case 'terna':
 client.updatePresence(from, Presence.composing)
 if (isUser) return reply('Ya estas registrado 🧐')
-if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}terna mikachero`)
+if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}terna Nombre\n\nEjemplo: ${prefix}terna mikachero`)
 var reg = body.slice(8)
 var nombre = reg.split("|")[0];
 user.push(sender)
