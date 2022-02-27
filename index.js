@@ -260,11 +260,11 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `HOLAA!! @${num.split('@')[0]} ¿COMO ESTAS?😃\n\n『Bienvenido A *${mdata.subject}*』\n\nUn gusto conocerte amig@ 🤗\n\n_Recuerda leer las reglas del grupo para no tener ningun problema 🧐_\n\n*Solo disfrutar de este grupo y divertite 🥳*`
+				teks = `HOLAA!! @${num.split('@')[0]} ¿COMO ESTAS?😃\n\n『Bienvenido A *${mdata.subject}*』\n\nUn Bienvenido al grupo HIJO DE PERRRA 🤗\n\n_Lee las normas oe maleante o  te cae el ban 🧐_\n\n*Para tu mecha solo no me estes etiquetando pavo*`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `Bueno, se fue @${num.split('@')[0]} 👋\n\nQue dios lo bendiga 😎`
+				teks = `Bueno, se fue @${num.split('@')[0]} 👋\n\nPobre marcianito.`
 				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
@@ -333,7 +333,7 @@ async function starts() {
 					insta: 'Calmao 😎\n\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor\n\n_*by shanduy*_',
 					musica: '*Papaseto lendo no hay musica, stickers nu mas aish* ',
 					musica2: '*Papaseto lendo no hay musica, stickers nu mas aish*',
-					daftarB: `「NO ESTAS REGISTRADO」\n\nPA NO APARECES EN MI BASE DE DATOS ✋🥸🤚\n\nPara poder usarme escribe el siguente comando\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar shanduy`,
+					daftarB: `「Habla Apestosooo」\n\nP✋🥸🤚\n\nPara poder ser parte del club premiun comando\n\nComando: ${prefix}terna micheroxsiempre\nEjemplo: ${prefix}terna+ (tu nick)`,
 				}
 			}
     			const apakah = ['Si','No']
@@ -557,7 +557,7 @@ if (budy.includes("https://m.facebook.com/")){
                 addLevelingXp(sender, amountXp)
                 if (requiredXp <= getLevelingXp(sender)) {
                     addLevelingLevel(sender, 1)
-                    await reply(`*「 FELICIDADES LEVEL UP 🆙🥳 」*\n\nFelicidades subiste de nivel sigue asi 👏\n\n*NOMBRE*\n${pushname}\n*XP*: ${getLevelingXp(sender)}\n*NIVEL*: ${getLevel} ⟿ ${getLevelingLevel(sender)}\n\n_*Para ver tu XP en tiempo real coloca el comando ${prefix}level*_`)
+                    await reply(`*「 Te levearon teclero 🆙🥳 」*\n\nAhora eres mas chucha lco 👏\n\n*Dinujito*\n${pushname}\n*XP*: ${getLevelingXp(sender)}\n*level conero*: ${getLevel} ⟿ ${getLevelingLevel(sender)}\n\n_*Para ver el nivel de tu probreza utiliza el comando ${prefix}level*_`)
                 }
             } catch (err) {
                 console.error(err)
@@ -850,7 +850,7 @@ break
 					prefix = args[0]
 					reply(`El prefijo se ha cambiado correctamente a : ${prefix}`)
 					break
-			case 'todos':
+			case 'todos12':
 				client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
                                         if (!isUser) return reply(mess.only.daftarB)
@@ -1387,7 +1387,7 @@ break
 			
 	//SERVICIO DE MUSICA Y VIDEO 			
 				
-		  case 'play':   
+		   case 'play':   
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?\n\nEjemplo: *play Industry Baby - Lil Nas X')
 		if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica)
@@ -1400,7 +1400,7 @@ break
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 break
-	
+		
 		case 'play2':   
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?\n\nEjemplo: *play2 Industry Baby - Lil Nas X')
 		if (!isUser) return reply(mess.only.daftarB)
@@ -1414,7 +1414,6 @@ break
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 break
-					
 		case 'ytmp4':
 		if (args.length < 1) return reply('Donde esta la url del video?\n\nEjemplo: *ytmp4 www.youtube.com/xxxxxxxxx')
 		if (!isUser) return reply(mess.only.daftarB)
@@ -1434,15 +1433,15 @@ break
 				
 //REGISTRO				
 
-case 'daftar':
+case 'terna':
 client.updatePresence(from, Presence.composing)
 if (isUser) return reply('Ya estas registrado 🧐')
-if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}daftar shanduy`)
+if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}terna mikachero`)
 var reg = body.slice(8)
 var nombre = reg.split("|")[0];
 user.push(sender)
 fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`DNI: BUENAGNO 🥸\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários: ${user.length}\`\`\``, text, {quoted: mek})
+client.sendMessage(from, `\`\`\`DIBUJITO ✅\`\`\`\n\n\`\`\`DNI DE DIBUJO: BUENAGNO 🥸\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários: ${user.length}\`\`\``, text, {quoted: mek})
 break
                                 
 //FIN DE REGISTRO  
@@ -1505,7 +1504,7 @@ break
                 const userXp = getLevelingXp(sender)
 		sem = sender.replace('@s.whatsapp.net','')
 		if (userLevel === undefined && userXp === undefined) return reply(mess.levelnol)
-                resul = `『 *TUS ESTADISTICAS 🆙* 』\n\nTus estadisticas en tiempo real 🕐\n\n├─ ❏ *NOMBRE:* ${sem}\n├─ ❏ *XP 🆙:* ${userXp}\n└─ ❏ *NIVEL:* ${userLevel}`
+                resul = `『 *TUS ESTADISTICAS 🆙* 』\n\nTus estadisticas en tiempo real 🕐\n\n├─ ❏ *DIBUJO:* ${sem}\n├─ ❏ *LEVEL DE CONO 🆙:* ${userXp}\n└─ ❏ *EXPERIENCIA DE RATA:* ${userLevel}`
                client.sendMessage(from, resul, text, { quoted: mek})
                 .catch(async (err) => {
                         console.error(err)
