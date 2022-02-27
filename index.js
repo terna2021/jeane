@@ -1436,7 +1436,7 @@ break
 case 'terna':
 client.updatePresence(from, Presence.composing)
 if (isUser) return reply('Ya estas registrado 🧐')
-if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}terna Nombre\n\nEjemplo: ${prefix}terna mikachero`)
+if (args.length < 1) return reply(`Incorrecto ❎\nEl comando de registo es\nComando: ${prefix}terna Nick\n\nEjemplo: ${prefix}TERNA micheroxsiempre`)
 var reg = body.slice(8)
 var nombre = reg.split("|")[0];
 user.push(sender)
