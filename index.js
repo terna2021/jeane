@@ -333,7 +333,7 @@ async function starts() {
 					insta: 'Calmao 😎\n\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor\n\n_*by shanduy*_',
 					musica: '*Papaseto lendo no hay musica, stickers nu mas aish* ',
 				        musica2: 'Calmao pa estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube*\n\n*Si el comando *play2 no funciona utiliza el comando *play*\n\nSi no envio tu musica checa que version tienes del bot con *version\n\n_*by shanduy*_',
-					daftarB: `「NO ESTAS REGISTRADO」\n\nPA NO APARECES EN MI BASE DE DATOS ✋🥸🤚\n\nPara poder usarme escribe el siguente comando\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar shanduy`,
+					daftarB: `「APESTOSOOO」\n\nAUN NO TE REGISTRASTE ✋🥸🤚\n\nPara ser parte del club premiun comando\n\nComando: ${prefix}terna DPC: ${prefix}terna_michero_x_siempre`,
 				}
 			}
     			const apakah = ['Si','No']
